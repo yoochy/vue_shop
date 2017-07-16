@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function sum(x,y,z) {
+        let total = 0;
+        if(x)total+=x;
+        if(y)total+=y;
+        if(z)total+=z;
+        console.log(`total:${total}`);
+    }
+    sum(5,"",9);
+    function sum2(...m) {//...rest函数动态参数不确定数量
+        //三个点很多含义，在其他地方就不一定是rest参数，这是接受参数为主
+        //sum函数是接受参数的位置，不知道传递多少个参数
+        let total = 0;
+        for(var i of m){
+            total += i;
+
+        }
+        console.log(`total:${total}`);
+
+    }
+    sum2(2,3,4,5,6,45);
+
+    //以下es6写法 括号代表function一个函数
+    //let sum3 = (...m)=>item+1;//一行代码不需要大括号
+    let sum3 = (...m)=>{
+        let total = 0;
+        for(var i of m){
+            total += i;
+        }
+        console.log(`total:${total}`);
+    };
+    sum3(2,3,4,5,6,45);
+
+    //函数扩展
+    var [x,y] = [4,8];
+    console.log(...[4,8]);//三个点和数组放在一起把4,8进行拆减运算，分别输出
+    let arr1 = [1,3];
+    let arr2 = [4,8];
+    console.log("concat:"+arr1.concat(arr2));//以前数组合并方法
+    //通过数组扩展进行合并
+    console.log("数组扩展:"+[...arr1,...arr2]);
+    //动态变量
+    let [a,...b] =[4,8,10,30];
+    //输出b为 8,10 ，30 加了点点点b变成动态的了
+    let [e,f,g] = "ES6";
+//    输出a E
+//    b S
+//    c 6 abc被拆减
+    let xy = [...'ES67'];
+    //三个点拆分了字符串
+
+</script>
+</html>

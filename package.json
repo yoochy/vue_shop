@@ -1,0 +1,19 @@
+{
+  "name": "vue_shop",
+  "version": "1.0.0",
+  "description": "vue商城",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoochy/vue_shop.git"
+  },
+  "author": "杨衡轶",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoochy/vue_shop/issues"
+  },
+  "homepage": "https://github.com/yoochy/vue_shop#readme"
+}
